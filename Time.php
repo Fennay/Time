@@ -89,7 +89,7 @@ class Time
             return date("今年m月d日 H:i", $time);
         }
 
-        return date("Y-m-d H:i", $time);
+        return $this->getFullTime($time);
     }
 
 
