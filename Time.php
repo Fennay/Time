@@ -173,6 +173,17 @@ class Time
     {
         return date('Y-m-d H:m:s', $time);
     }
+    
+    /**
+     * 计算当前时间距离明天的秒数
+     * @return false|int
+     * Author: Fengguangyong
+     */
+    public function toTomorrowSec(){
+        $nowTime = time();
+        $tomTime = strtotime(date('Y-m-d',strtotime("+1 day")));
+        return $tomTime - $nowTime;
+    }
 
 
 }
